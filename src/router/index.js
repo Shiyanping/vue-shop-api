@@ -13,7 +13,6 @@ export default new Router({
       path: '/hello',
       component: resolve => require(['../components/Hello.vue'], resolve),
       children: [
-
       ]
     }
   ]
