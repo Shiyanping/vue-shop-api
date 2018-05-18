@@ -3,14 +3,20 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import axios from 'axios';
-import "babel-polyfill";
+import fastClick from 'fastclick';
+import store from './store';
+import 'babel-polyfill';
+import '@css/reset.css';
+import '@css/border.css';
+
+Vue.config.productionTip = false;
+fastClick.attach(document.body);
 
 /* eslint-disable no-new */
-Vue.prototype.$axios = axios;
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
-  components: { App }
-})
+  store,
+  components: { App },
+  template: '<App/>'
+});
